@@ -1,0 +1,171 @@
+config system automation-trigger
+
+    edit "Kuma-High-CPU"
+        set description "High CPU usage"
+        set trigger-type event-based
+        set event-type high-cpu
+    next
+
+    edit "Kuma-MEM-Conserve"
+        set description "Memory conserve mode entered"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 22011
+    next
+
+    edit "Kuma-MEM-Extreme"
+        set description "Extreme low memory mode entered"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 22022
+    next
+
+    edit "Kuma-MEM-Normal"
+        set description "Memory conserve mode exited"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 22012
+    next
+
+    edit "Kuma-Admin-Created"
+        set description "Local administrator created"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 44547
+        config fields
+            edit 1
+                set name "msg"
+                set value "Add system.admin *"
+            next
+        end
+    next
+
+    edit "Kuma-lan1-DOWN"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "lan1"
+            next
+            edit 2
+                set name "status"
+                set value "DOWN"
+            next
+        end
+    next
+
+    edit "Kuma-lan1-UP"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "lan1"
+            next
+            edit 2
+                set name "status"
+                set value "UP"
+            next
+        end
+    next
+
+    edit "Kuma-lan2-DOWN"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "lan2"
+            next
+            edit 2
+                set name "status"
+                set value "DOWN"
+            next
+        end
+    next
+
+    edit "Kuma-lan2-UP"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "lan2"
+            next
+            edit 2
+                set name "status"
+                set value "UP"
+            next
+        end
+    next
+
+    edit "Kuma-lan3-DOWN"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "lan3"
+            next
+            edit 2
+                set name "status"
+                set value "DOWN"
+            next
+        end
+    next
+
+    edit "Kuma-lan3-UP"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "lan3"
+            next
+            edit 2
+                set name "status"
+                set value "UP"
+            next
+        end
+    next
+
+    edit "Kuma-a-DOWN"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "a"
+            next
+            edit 2
+                set name "status"
+                set value "DOWN"
+            next
+        end
+    next
+
+    edit "Kuma-a-UP"
+        set trigger-type event-based
+        set event-type event-log
+        set logid 20090
+        config fields
+            edit 1
+                set name "intf"
+                set value "a"
+            next
+            edit 2
+                set name "status"
+                set value "UP"
+            next
+        end
+    next
+
+end

@@ -1,0 +1,224 @@
+config system automation-stitch
+
+    edit "Kuma-HB-S-00"
+        set description "Kuma heartbeat minute 00"
+        set status enable
+        set trigger "Kuma-HB-00"
+        config actions
+            edit 1
+                set action "Kuma-HB-OK"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-HB-S-10"
+        set description "Kuma heartbeat minute 10"
+        set status enable
+        set trigger "Kuma-HB-10"
+        config actions
+            edit 1
+                set action "Kuma-HB-OK"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-HB-S-20"
+        set description "Kuma heartbeat minute 20"
+        set status enable
+        set trigger "Kuma-HB-20"
+        config actions
+            edit 1
+                set action "Kuma-HB-OK"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-HB-S-30"
+        set description "Kuma heartbeat minute 30"
+        set status enable
+        set trigger "Kuma-HB-30"
+        config actions
+            edit 1
+                set action "Kuma-HB-OK"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-HB-S-40"
+        set description "Kuma heartbeat minute 40"
+        set status enable
+        set trigger "Kuma-HB-40"
+        config actions
+            edit 1
+                set action "Kuma-HB-OK"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-HB-S-50"
+        set description "Kuma heartbeat minute 50"
+        set status enable
+        set trigger "Kuma-HB-50"
+        config actions
+            edit 1
+                set action "Kuma-HB-OK"
+                set required enable
+            next
+        end
+    next
+
+
+    edit "Kuma-CPU-Alert"
+        set description "High CPU to Kuma"
+        set status enable
+        set trigger "Kuma-High-CPU"
+        config actions
+            edit 1
+                set action "Kuma-CPU-HIGH"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-MEM-Conserve-S"
+        set description "Memory conserve to Kuma"
+        set status enable
+        set trigger "Kuma-MEM-Conserve"
+        config actions
+            edit 1
+                set action "Kuma-MEM-CONSERVE"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-MEM-Extreme-S"
+        set description "Extreme low memory to Kuma"
+        set status enable
+        set trigger "Kuma-MEM-Extreme"
+        config actions
+            edit 1
+                set action "Kuma-MEM-EXTREME"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-MEM-Normal-S"
+        set description "Memory recovered to Kuma"
+        set status enable
+        set trigger "Kuma-MEM-Normal"
+        config actions
+            edit 1
+                set action "Kuma-MEM-NORMAL"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-Admin-Alert"
+        set description "Administrator creation to Kuma"
+        set status enable
+        set trigger "Kuma-Admin-Created"
+        config actions
+            edit 1
+                set action "Kuma-ADMIN-CREATED"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-lan1-DOWN-S"
+        set status enable
+        set trigger "Kuma-lan1-DOWN"
+        config actions
+            edit 1
+                set action "Kuma-LAN1-DOWN"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-lan1-UP-S"
+        set status enable
+        set trigger "Kuma-lan1-UP"
+        config actions
+            edit 1
+                set action "Kuma-LAN1-UP"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-lan2-DOWN-S"
+        set status enable
+        set trigger "Kuma-lan2-DOWN"
+        config actions
+            edit 1
+                set action "Kuma-LAN2-DOWN"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-lan2-UP-S"
+        set status enable
+        set trigger "Kuma-lan2-UP"
+        config actions
+            edit 1
+                set action "Kuma-LAN2-UP"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-lan3-DOWN-S"
+        set status enable
+        set trigger "Kuma-lan3-DOWN"
+        config actions
+            edit 1
+                set action "Kuma-LAN3-DOWN"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-lan3-UP-S"
+        set status enable
+        set trigger "Kuma-lan3-UP"
+        config actions
+            edit 1
+                set action "Kuma-LAN3-UP"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-a-DOWN-S"
+        set status enable
+        set trigger "Kuma-a-DOWN"
+        config actions
+            edit 1
+                set action "Kuma-A-DOWN"
+                set required enable
+            next
+        end
+    next
+
+    edit "Kuma-a-UP-S"
+        set status enable
+        set trigger "Kuma-a-UP"
+        config actions
+            edit 1
+                set action "Kuma-A-UP"
+                set required enable
+            next
+        end
+    next
+
+end

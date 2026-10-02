@@ -1,0 +1,137 @@
+execute batch start
+config system automation-action
+
+    edit "Kuma-HB-OK"
+        set description "Kuma regular heartbeat"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=up&msg=HEARTBEAT_OK"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-CPU-HIGH"
+        set description "Kuma high CPU alert"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=CPU_HIGH"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-MEM-CONSERVE"
+        set description "Kuma memory conserve alert"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=MEMORY_CONSERVE"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-MEM-EXTREME"
+        set description "Kuma extreme memory alert"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=MEMORY_EXTREME"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-MEM-NORMAL"
+        set description "Kuma memory conserve exited"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=up&msg=MEMORY_NORMAL"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-ADMIN-CREATED"
+        set description "Kuma administrator created alert"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=ADMIN_CREATED"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-LAN1-DOWN"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=LAN1_DOWN"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-LAN1-UP"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=up&msg=LAN1_UP"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-LAN2-DOWN"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=LAN2_DOWN"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-LAN2-UP"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=up&msg=LAN2_UP"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-LAN3-DOWN"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=LAN3_DOWN"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-LAN3-UP"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=up&msg=LAN3_UP"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-A-DOWN"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=down&msg=A_DOWN"
+        set verify-host-cert enable
+    next
+
+    edit "Kuma-A-UP"
+        set action-type webhook
+        set protocol https
+        set method get
+        set port 443
+        set uri "kuma.example.com/api/push/REPLACE_WITH_PUSH_TOKEN?status=up&msg=A_UP"
+        set verify-host-cert enable
+    next
+
+end
+execute batch end
